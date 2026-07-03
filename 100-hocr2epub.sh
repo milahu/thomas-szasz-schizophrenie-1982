@@ -22,7 +22,8 @@ fi
 scale=$(python -c "print(300 / $scan_resolution)")
 
 args=(
-  hocr-to-epub-fxl
+  # hocr-to-epub-fxl
+  /home/user/src/archive-hocr-tools/bin/hocr-to-epub-fxl
   --output "$dst"
 )
 if [ "$dst" = "." ]; then
@@ -42,28 +43,45 @@ doc_modified=$(
 
 args+=(
   --scale "$scale"
-  --image-format avif
+
+  # FIXME error: unrecognized arguments: --image-format
+  # this should set the default value for all image formats
+  # --image-format avif
+
+  --color-image-format avif
+  --grayscale-image-format avif
+  --binary-image-format avif
+
+  --grayscale-image-pages 1-228,231-
+  --color-image-pages 229-230
+  --image-color-levels 20x80
+
+  # 20% smaller than avif, encode 6000x faster than avif, requires group4-polyfill
+  # https://github.com/milahu/group4-polyfill
+  # --binary-image-format group4.tiff
+
   --text-format html
-  --doc-title "$doc_title"
+  # --doc-title "$doc_title"
   --doc-modified "$doc_modified"
-)
-todo_args+=(
-  --doc-title ""
-  --doc-subtitle ""
-  --doc-description ""
+  --doc-title "Schizophrenie"
+  --doc-subtitle "Das heilige Symbol der Psychiatrie"
+  # https://book8.de/schizophrenie-das-heilige-symbol-der-psychiatrie
+  --doc-description "Das 1976 erstmals veröffentlichte Buch \"Schizophrenie: The Sacred Symbol of Psychiatry\" untersucht das Konzept der Schizophrenie und die Ursprünge ihrer Klassifizierung als Krankheit.
+
+Szasz argumentiert überzeugend, dass das Wort Schizophrenie keine medizinische Diagnose ist, sondern ein Symbol, das von Psychiatern als Mittel zur Kontrolle eingesetzt wird."
   --doc-subject ""
-  --doc-date 2025
+  --doc-date 1982
   --doc-edition 1
-  --doc-extent "123 pages"
-  --doc-author ""
-  --doc-introducer ""
-  --doc-contributor ""
-  --doc-translator ""
-  --doc-publisher ""
+  --doc-extent "228 pages"
+  --doc-author "Thomas Szasz"
+  # --doc-introducer ""
+  # --doc-contributor ""
+  # --doc-translator ""
+  --doc-publisher "Fischer Taschenbuch"
   --doc-language de
-  --doc-isbn 0000000000000
-  --doc-cover-image 070-deskew/999.tiff
-  --canonical-url-base https://milahu.github.io/todo/
+  --doc-isbn 9783203506982
+  --doc-cover-image 077-compress-jpeg/229.jpg
+  --canonical-url-base https://milahu.github.io/thomas-szasz-schizophrenie-1982/
 )
 
  printf '>'
