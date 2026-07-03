@@ -29,7 +29,7 @@ untersucht das Konzept der Schizophrenie und die Ursprünge ihrer Klassifizierun
 Szasz argumentiert überzeugend, dass das Wort Schizophrenie keine medizinische Diagnose ist,
 sondern ein Symbol, das von Psychiatern als Mittel zur Kontrolle eingesetzt wird.
 
-- Verlag: Fischer Taschenbuch
+- Verlag: Europaverlag
 - ISBN-13: 9783203506982
 - ISBN-10: 320350698X
 

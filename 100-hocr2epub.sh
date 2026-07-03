@@ -77,7 +77,7 @@ Szasz argumentiert überzeugend, dass das Wort Schizophrenie keine medizinische 
   # --doc-introducer ""
   # --doc-contributor ""
   # --doc-translator ""
-  --doc-publisher "Fischer Taschenbuch"
+  --doc-publisher "Europaverlag"
   --doc-language de
   --doc-isbn 9783203506982
   --doc-cover-image 077-compress-jpeg/229.jpg
