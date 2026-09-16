@@ -10,6 +10,10 @@ https://book8.de/schizophrenie-das-heilige-symbol-der-psychiatrie
 
 <blockquote>
 
+Schizophrenie: Das heilige Symbol der Psychiatrie
+
+Thomas Szasz (Autor)
+
 Das Buch entlarvt Diagnosen und Krankheitsbilder der Psychiatrie
 als Symbole und Rituale einer Geheimgesellschaft,
 die dem Arzt, nicht dem Patienten dienen.
